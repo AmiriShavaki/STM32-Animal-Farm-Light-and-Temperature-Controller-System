@@ -1,0 +1,26 @@
+--cpu Cortex-M3
+"lcdpwm\startup_stm32f103x6.o"
+"lcdpwm\character_lcd.o"
+"lcdpwm\main.o"
+"lcdpwm\stm32f1xx_it.o"
+"lcdpwm\stm32f1xx_hal_msp.o"
+"lcdpwm\stm32f1xx_hal_gpio_ex.o"
+"lcdpwm\stm32f1xx_hal_adc.o"
+"lcdpwm\stm32f1xx_hal_adc_ex.o"
+"lcdpwm\stm32f1xx_hal.o"
+"lcdpwm\stm32f1xx_hal_rcc.o"
+"lcdpwm\stm32f1xx_hal_rcc_ex.o"
+"lcdpwm\stm32f1xx_hal_gpio.o"
+"lcdpwm\stm32f1xx_hal_dma.o"
+"lcdpwm\stm32f1xx_hal_cortex.o"
+"lcdpwm\stm32f1xx_hal_pwr.o"
+"lcdpwm\stm32f1xx_hal_flash.o"
+"lcdpwm\stm32f1xx_hal_flash_ex.o"
+"lcdpwm\stm32f1xx_hal_exti.o"
+"lcdpwm\stm32f1xx_hal_tim.o"
+"lcdpwm\stm32f1xx_hal_tim_ex.o"
+"lcdpwm\system_stm32f1xx.o"
+--strict --scatter "LCDPWM\LCDPWM.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "LCDPWM.map" -o LCDPWM\LCDPWM.axf

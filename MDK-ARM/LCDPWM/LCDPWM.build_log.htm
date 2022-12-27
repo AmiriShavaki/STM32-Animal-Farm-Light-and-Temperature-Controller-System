@@ -1,0 +1,124 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.31.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Mahdi Amiri, IUST, LIC=Q7GNK-ILUSF-7UTY8-L83YD-WVZY4-PR1SU
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.31.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.31.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
+Dialog DLL:      TCM.DLL V1.46.0.0
+ 
+<h2>Project:</h2>
+C:\Users\Amiri\Documents\semester7\Embedded\HW\HW2\LCDPWM\LCDPWM\MDK-ARM\LCDPWM.uvprojx
+Project File Date:  12/10/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'LCDPWM'
+assembling startup_stm32f103x6.s...
+compiling stm32f1xx_hal_msp.c...
+compiling stm32f1xx_it.c...
+compiling stm32f1xx_hal_gpio_ex.c...
+compiling character_lcd.c...
+..\Core\Src\character_lcd.c(141): warning:  #188-D: enumerated type mixed with another type
+  	LCD_SendCommand(_8BIT_INTERFACE); /* Function Set Command: (8-Bit interface) */
+..\Core\Src\character_lcd.c(144): warning:  #188-D: enumerated type mixed with another type
+  	LCD_SendCommand(_8BIT_INTERFACE); /* Function Set Command: (8-Bit interface) */
+..\Core\Src\character_lcd.c(147): warning:  #188-D: enumerated type mixed with another type
+  	LCD_SendCommand( (_8BIT_INTERFACE << _HIGH_NIBBLE_SHIFT) | _4BIT_INTERFACE ); /* Function Set Command: (8-Bit interface) After this command is written, BF can be checked / Function Set: Sets interface to 4 -bit */
+..\Core\Src\character_lcd.c(149): warning:  #188-D: enumerated type mixed with another type
+  	LCD_SendCommand( (_4BIT_INTERFACE << _HIGH_NIBBLE_SHIFT) | (LCD_Config.NumberOfLine << _NBIT) | (LCD_Config.Font << _FBIT) ); /* Function Set (Interface = 4 -bit, Set N and F for number of lines and character font) */
+..\Core\Src\character_lcd.c(170): warning:  #188-D: enumerated type mixed with another type
+  	LCD_SendCommand(_8BIT_INTERFACE << _HIGH_NIBBLE_SHIFT); /* Function Set Command: (8-Bit interface) */
+..\Core\Src\character_lcd.c(173): warning:  #188-D: enumerated type mixed with another type
+  	LCD_SendCommand(_8BIT_INTERFACE << _HIGH_NIBBLE_SHIFT); /* Function Set Command: (8-Bit interface) */
+..\Core\Src\character_lcd.c(176): warning:  #188-D: enumerated type mixed with another type
+  	LCD_SendCommand(_8BIT_INTERFACE << _HIGH_NIBBLE_SHIFT); /* Function Set Command: (8-Bit interface) After this command is written, BF can be checked / Function Set: Sets interface to 4 -bit */
+..\Core\Src\character_lcd.c(178): warning:  #188-D: enumerated type mixed with another type
+  	LCD_SendCommand( (_8BIT_INTERFACE << _HIGH_NIBBLE_SHIFT) | (LCD_Config.NumberOfLine << _NBIT) | (LCD_Config.Font << _FBIT) ); /* Function Set (Interface = 8 -bit, Set N and F for number of lines and character font) */
+..\Core\Src\character_lcd.c(256): warning:  #188-D: enumerated type mixed with another type
+  			LCD_SendCommand(_FIRST_ROW + column); /* Send DD RAM address */
+..\Core\Src\character_lcd.c(261): warning:  #188-D: enumerated type mixed with another type
+  			LCD_SendCommand(_SECOND_ROW + column); /* Send DD RAM address */
+..\Core\Src\character_lcd.c(266): warning:  #188-D: enumerated type mixed with another type
+  			LCD_SendCommand(_THIRD_ROW + column); /* Send DD RAM address */
+..\Core\Src\character_lcd.c(271): warning:  #188-D: enumerated type mixed with another type
+  			LCD_SendCommand(_FOURTH_ROW + column); /* Send DD RAM address */
+..\Core\Src\character_lcd.c: 12 warnings, 0 errors
+compiling main.c...
+../Core/Src/main.c(170): warning:  #188-D: enumerated type mixed with another type
+  			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, ones % 2);
+../Core/Src/main.c(171): warning:  #188-D: enumerated type mixed with another type
+  			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9, (ones % 4 - ones % 2) / 2);
+../Core/Src/main.c(172): warning:  #188-D: enumerated type mixed with another type
+  			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_10, (ones % 8 - ones % 4) / 4);
+../Core/Src/main.c(173): warning:  #188-D: enumerated type mixed with another type
+  			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_11, (ones % 16 - ones % 8) / 8);
+../Core/Src/main.c(175): warning:  #188-D: enumerated type mixed with another type
+  			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_12, tens % 2);
+../Core/Src/main.c(176): warning:  #188-D: enumerated type mixed with another type
+  			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_13, (tens % 4 - tens % 2) / 2);
+../Core/Src/main.c(177): warning:  #188-D: enumerated type mixed with another type
+  			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_14, (tens % 8 - tens % 4) / 4);
+../Core/Src/main.c(178): warning:  #188-D: enumerated type mixed with another type
+  			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_15, (tens % 16 - tens % 8) / 8);
+../Core/Src/main.c(76): warning:  #550-D: variable "thos"  was set but never used
+  	unsigned char thos;
+../Core/Src/main.c: 9 warnings, 0 errors
+compiling stm32f1xx_hal_adc_ex.c...
+compiling stm32f1xx_hal_adc.c...
+compiling stm32f1xx_hal.c...
+compiling stm32f1xx_hal_rcc_ex.c...
+compiling stm32f1xx_hal_cortex.c...
+compiling stm32f1xx_hal_gpio.c...
+compiling stm32f1xx_hal_pwr.c...
+compiling stm32f1xx_hal_rcc.c...
+compiling stm32f1xx_hal_dma.c...
+compiling stm32f1xx_hal_flash.c...
+compiling stm32f1xx_hal_flash_ex.c...
+compiling stm32f1xx_hal_exti.c...
+compiling system_stm32f1xx.c...
+compiling stm32f1xx_hal_tim_ex.c...
+compiling stm32f1xx_hal_tim.c...
+linking...
+Program Size: Code=8552 RO-data=292 RW-data=28 ZI-data=1756  
+FromELF: creating hex file...
+"LCDPWM\LCDPWM.axf" - 0 Error(s), 21 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.0.pack
+                Keil.STM32F1xx_DFP.2.4.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_LCDPWM
+  C:\Users\Amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include
+  C:\Users\Amiri\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+Build Time Elapsed:  00:00:21
+</pre>
+</body>
+</html>
